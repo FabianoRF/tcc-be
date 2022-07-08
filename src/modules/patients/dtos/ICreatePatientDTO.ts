@@ -16,7 +16,7 @@ export default interface ICreatePatientDTO {
   qtdFilhos?: number;
   comQuemMora: string;
   tipoMoradia: string;
-  alfabetizado: string;
+  alfabetizado: boolean;
   escolaridade: string;
   qualCurso?: string;
   situacaoLaboral: string;

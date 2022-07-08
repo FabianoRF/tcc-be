@@ -1,24 +1,20 @@
 import { inject, injectable } from 'tsyringe';
 
-import User from '../infra/typeorm/entities/User';
-import IUsersRepository from '../repositories/IUsersRepository';
-import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 import ICreatePatientDTO from '../dtos/ICreatePatientDTO';
+import IPatientsRepository from '../repositories/IPatientsRepository';
+import Patient from '../infra/typeorm/entities/Patient';
 
 @injectable()
 class CreatePatientService {
   constructor(
-    @inject('UsersRepository')
-    private usersRepository: IUsersRepository,
-
-    @inject('HashProvider')
-    private hashProvider: IHashProvider,
+    @inject('PatientsRepository')
+    private patientsRepository: IPatientsRepository,
   ) {}
 
-  public async execute(input: ICreatePatientDTO): Promise<User> {
-    const user = this.usersRepository.create(input);
+  public async execute(input: ICreatePatientDTO): Promise<Patient> {
+    const patient = this.patientsRepository.create(input);
 
-    return user;
+    return patient;
   }
 }
 

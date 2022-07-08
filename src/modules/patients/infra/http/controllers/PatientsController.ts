@@ -2,20 +2,16 @@ import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import { classToClass } from 'class-transformer';
 
-import CreateUserService from '@modules/users/services/CreateUserService';
+import CreatePatientService from '@modules/patients/services/CreatePatientService';
 
 export default class PatientsController {
   async create(request: Request, response: Response): Promise<Response> {
     const { body } = request;
 
-    const createUser = container.resolve(CreateUserService);
+    const createUser = container.resolve(CreatePatientService);
 
-    const user = await createUser.execute({
-      name,
-      email,
-      password,
-    });
+    const patient = await createUser.execute(body);
 
-    return response.json({ user: classToClass(user) });
+    return response.json(patient);
   }
 }
