@@ -7,7 +7,7 @@ export default interface ICreatePatientDTO {
   naturalidade: string;
   endereco: string;
   telefone: string;
-  dataNascimento: Date;
+  dataNasc: Date;
   idade: number;
   genero: string;
   orientacaoSexual: string;
@@ -16,7 +16,7 @@ export default interface ICreatePatientDTO {
   qtdFilhos?: number;
   comQuemMora: string;
   tipoMoradia: string;
-  eAlfabetizado: string;
+  alfabetizado: boolean;
   escolaridade: string;
   qualCurso?: string;
   situacaoLaboral: string;
@@ -30,12 +30,12 @@ export default interface ICreatePatientDTO {
   qualMedicamento: string;
   fazUsoDrogas: boolean;
   quaisDrogas: string;
-  qualTempoUsaDrogas: string;
+  quantoTempoUsaDrogas: string;
   perdaRecente: boolean;
   motivoPerdaRecente: string;
   tentativaSuicidio: boolean;
-  qtdTentativaSuicidio: boolean;
-  internacoes: string;
+  qtdTentativaSuicidio: number;
+  internacoes: boolean;
   quantasInternacoes: boolean;
   historiaSuicidio: boolean;
   parentescoSuicidio: string;
