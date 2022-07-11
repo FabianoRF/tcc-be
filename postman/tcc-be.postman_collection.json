@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "078f8387-fd1e-4c78-a6d7-2dea4af6264c",
+		"name": "tcc-be",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14868675"
+	},
+	"item": [
+		{
+			"name": "createPatient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nomeRG\": \"string\",\r\n  \"nomeSocial\": \"string\",\r\n  \"nomeMae\": \"string\",\r\n  \"cartaoSUS\": \"string\",\r\n  \"procedencia\": \"string\",\r\n  \"naturalidade\": \"string\",\r\n  \"endereco\": \"string\",\r\n  \"telefone\": \"string\",\r\n  \"dataNasc\": \"2001-09-29 03:00\",\r\n  \"idade\": 10,\r\n  \"genero\": \"string\",\r\n  \"orientacaoSexual\": \"string\",\r\n  \"estadoCivil\": \"string\",\r\n  \"possuiFilhos\": true,\r\n  \"qtdFilhos\": 10,\r\n  \"comQuemMora\": \"string\",\r\n  \"tipoMoradia\": \"string\",\r\n  \"alfabetizado\": true,\r\n  \"escolaridade\": \"string\",\r\n  \"qualCurso\": \"string\",\r\n  \"situacaoLaboral\": \"string\",\r\n  \"corEtinia\": \"string\",\r\n  \"religiao\": \"string\",\r\n\r\n  \"fazTratamento\": true,\r\n  \"qualTratamento\": \"string\",\r\n  \"fazUsoMedicamento\": true,\r\n  \"qualMedicamento\": \"string\",\r\n  \"fazUsoDrogas\": true,\r\n  \"quaisDrogas\": \"string\",\r\n  \"quantoTempoUsaDrogas\": \"string\",\r\n  \"perdaRecente\": true,\r\n  \"motivoPerdaRecente\": \"string\",\r\n  \"tentativaSuicidio\": true,\r\n  \"qtdTentativaSuicidio\": 10,\r\n  \"internacoes\": true,\r\n  \"quantasInternacoes\": \"string\",\r\n  \"historiaSuicidio\": true,\r\n  \"parentescoSuicidio\": \"string\",\r\n  \"comoChegou\": \"string\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUsers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"freis884@gmail.com\",\r\n    \"password\": \"teste123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/sessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
